@@ -1,0 +1,19 @@
+---
+title: "Intro to importing data with importR"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Intro to importing data with importR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(import)
+```
