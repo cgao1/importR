@@ -2,20 +2,25 @@
 #'
 #' @description
 #' This \code{import} function can import data from
-#' delimited text files, Excel spreadsheets and statistical packages
+#' delimited text files, simple JSON files, Excel spreadsheets and statistical packages
 #' such as SAS, SPSS, and STATA
 #'
 #' @details
 #' The import function is a wrapper for the
 #' \href{https://haven.tidyverse.org/}{haven},
 #' \href{https://readxl.tidyverse.org/}{readxl},
+#' \href{https://cran.r-project.org/web/packages/rjson/index.html}{rjson},
 #' and  \href{https://github.com/r-lib/vroom}{vroom} packages.
+#'
+#' @note
+#' Complex nested JSON files will not be imported properly
 #'
 #' @seealso
 #' \link[haven]{read_sas},
 #' \link[haven]{read_dta},
 #' \link[haven]{read_spss},
 #' \link[readxl]{read_excel},
+#' \link[rjson]{fromJSON},
 #' \link[vroom]{vroom}
 #'
 #'
@@ -26,6 +31,8 @@
 #' @import readxl
 #' @import vroom
 #' @import tools
+#' @import rjson
+#' @import xmlconvert
 #'
 #' @export
 #' @return a data frame
@@ -84,6 +91,15 @@ import <- function(file){
 
   else if(extension == "dta") {
     dataset <- haven::read_dta(file)
+  }
+  else if(extension =="json"){
+    dataset <- rjson::fromJSON(file=file)
+    dataset <- as.data.frame(dataset)
+  }
+  else if(extension =="xml"){
+    dataset <- xmlconvert::xml_to_df(text = file,
+                                     records.tags = c("record"),
+                                     fields = "tags")
   }
 
   else {

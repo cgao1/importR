@@ -1,6 +1,6 @@
 Package: importR
 Title: Import and external file into in R data frame
-Version: 1.0.1
+Version: 1.1.1
 Authors@R: 
     person("Calvin", "G", , "cg@example.com", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
@@ -14,4 +14,8 @@ Suggests:
 VignetteBuilder: knitr
 Imports:
   haven,
-  vroom
+  vroom,
+  readxl,
+  tools,
+  rjson
+  
