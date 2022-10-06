@@ -1,10 +1,8 @@
 # importR
 
-![](tools.jpg)
-image in project, need to have image in project folder and docs
-what about for assesibility?
+    ![](tools.jpeg) image in project, need to have image in project folder and docs what about for assesibility?
 
-<img src="tools.jpg" width= "200" />
+<img src="tools.jpeg" width="200"/>
 
 The goal of importR of importR is to create an R data frame from external data in SAS, SPSS, or Stata binary files, Excel Workbooks, or delimited text files
 
@@ -13,15 +11,15 @@ The goal of importR of importR is to create an R data frame from external data i
 From CRAN
 
 ``` r
-install.packages("importR")
+#install.packages("importR")
 ```
 
 For the development version
 
 ``` r
-if(!require("remotes")){
-install.packages("remotes")
+#if(!require("remotes")){
+#install.packages("remotes")
 
-}
-remotes::install_github("rkabacoff/importR")
+#}
+#remotes::install_github("rkabacoff/importR")
 ```

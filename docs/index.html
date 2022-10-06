@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">importR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.0.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.1.1</span>
       </span>
     </div>
 
@@ -61,22 +61,22 @@
 <div class="section level1">
 <div class="page-header"><h1 id="importr">importR<a class="anchor" aria-label="anchor" href="#importr"></a>
 </h1></div>
-<p><img src="tools.jpg"> image in project, need to have image in project folder and docs what about for assesibility?</p>
-<p><img src="tools.jpg" width="200"></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>[](tools.jpeg) image <span class="cf">in</span> project, need to have image <span class="cf">in</span> project folder and docs what about <span class="cf">for</span> assesibility?</span></code></pre></div>
+<p><img src="tools.jpeg" width="200"></p>
 <p>The goal of importR of importR is to create an R data frame from external data in SAS, SPSS, or Stata binary files, Excel Workbooks, or delimited text files</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>From CRAN</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"importR"</span><span class="op">)</span></span></code></pre></div>
-<p>For the development version</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="st"><a href="https://remotes.r-lib.org" class="external-link">"remotes"</a></span><span class="op">)</span><span class="op">)</span><span class="op">{</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="co">#install.packages("importR")</span></span></code></pre></div>
+<p>For the development version</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">#if(!require("remotes")){</span></span>
+<span><span class="co">#install.packages("remotes")</span></span>
 <span></span>
-<span><span class="op">}</span></span>
-<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"rkabacoff/importR"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="co">#}</span></span>
+<span><span class="co">#remotes::install_github("rkabacoff/importR")</span></span></code></pre></div>
 </div>
 </div>
   </div>

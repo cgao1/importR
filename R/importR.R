@@ -72,16 +72,6 @@ import <- function(file){
   }
 
   else if(extension == "sas7bdat") {
-    if(!require("haven")){
-      answer <- readline(prompt = "You need the haven package. Would you like to install it (y/n)? ")
-      if (answer == "y"){
-        install.packages("haven")
-      } else {
-        note("no file imported")
-        return()
-      }
-
-    }
     dataset <- haven::read_sas(file)
   }
 
@@ -103,10 +93,6 @@ import <- function(file){
   }
 
   else {
-    if(!require("vroom")){
-      print("You do not have the needed vroom package so we will install it for you!")
-      install.packages("vroom")
-    }
     dataset<- vroom::vroom(file)
   }
 
