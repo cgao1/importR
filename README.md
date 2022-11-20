@@ -1,6 +1,6 @@
 # importR
 
-    ![](tools.jpeg) image in project, need to have image in project folder and docs what about for assesibility?
+
 
 <img src="tools.jpeg" width="200"/>
 
@@ -22,4 +22,6 @@ For the development version
 
 #}
 #remotes::install_github("rkabacoff/importR")
+
+#![](tools.jpeg) image in project, need to have image in project folder and docs what about for assesibility?
 ```
